@@ -1,0 +1,70 @@
+<section id="nosotros" class="bg-gray-50 px-[5%] py-20">
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Visual izquierda -->
+    <div class="relative">
+      <div class="bg-navy rounded-2xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+        <svg viewBox="0 0 340 260" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60"  y="40" width="50" height="140" rx="6" fill="rgba(91,184,196,0.2)" stroke="rgba(91,184,196,0.4)" stroke-width="1.5"/>
+          <rect x="65"  y="80" width="40" height="95"  rx="4" fill="rgba(91,184,196,0.15)"/>
+          <rect x="65"  y="150" width="40" height="25" rx="2" fill="rgba(91,184,196,0.35)"/>
+          <ellipse cx="85" cy="40" rx="22" ry="8" fill="rgba(91,184,196,0.3)" stroke="rgba(91,184,196,0.5)" stroke-width="1"/>
+          <rect x="145" y="60" width="50" height="120" rx="6" fill="rgba(91,184,196,0.15)" stroke="rgba(91,184,196,0.3)" stroke-width="1.5"/>
+          <rect x="150" y="100" width="40" height="75" rx="4" fill="rgba(91,184,196,0.12)"/>
+          <rect x="150" y="155" width="40" height="20" rx="2" fill="rgba(91,184,196,0.25)"/>
+          <ellipse cx="170" cy="60" rx="22" ry="8" fill="rgba(91,184,196,0.25)" stroke="rgba(91,184,196,0.4)" stroke-width="1"/>
+          <rect x="230" y="30" width="50" height="150" rx="6" fill="rgba(91,184,196,0.2)" stroke="rgba(91,184,196,0.4)" stroke-width="1.5"/>
+          <rect x="235" y="70" width="40" height="105" rx="4" fill="rgba(91,184,196,0.15)"/>
+          <rect x="235" y="150" width="40" height="25" rx="2" fill="rgba(91,184,196,0.4)"/>
+          <ellipse cx="255" cy="30" rx="22" ry="8" fill="rgba(91,184,196,0.3)" stroke="rgba(91,184,196,0.5)" stroke-width="1"/>
+          <line x1="110" y1="180" x2="145" y2="180" stroke="rgba(91,184,196,0.4)" stroke-width="2"/>
+          <line x1="195" y1="180" x2="230" y2="180" stroke="rgba(91,184,196,0.4)" stroke-width="2"/>
+          <rect x="40" y="185" width="260" height="12" rx="4" fill="rgba(91,184,196,0.15)"/>
+          <circle cx="85"  cy="120" r="5" fill="rgba(91,184,196,0.3)"/>
+          <circle cx="85"  cy="105" r="4" fill="rgba(91,184,196,0.2)"/>
+          <circle cx="170" cy="130" r="4" fill="rgba(91,184,196,0.3)"/>
+          <circle cx="255" cy="110" r="6" fill="rgba(91,184,196,0.25)"/>
+          <text x="170" y="230" text-anchor="middle" fill="rgba(91,184,196,0.5)"
+            font-family="Montserrat, sans-serif" font-size="11" font-weight="600" letter-spacing="2">
+            PLANTA DE PRODUCCIÓN
+          </text>
+        </svg>
+      </div>
+
+      <!-- Badge -->
+      <div class="absolute -bottom-5 -right-5 bg-teal text-white rounded-xl px-5 py-4 text-center shadow-lg">
+        <span class="font-montserrat font-extrabold text-3xl block leading-none">+10</span>
+        <span class="text-xs font-semibold tracking-wide opacity-90">años en el rubro</span>
+      </div>
+    </div>
+
+    <!-- Texto derecha -->
+    <div>
+      <p class="text-teal text-xs font-semibold tracking-widest uppercase mb-3">Quiénes somos</p>
+      <h2 class="font-montserrat font-bold text-navy text-3xl leading-tight mb-4">
+        Producimos calidad química desde Argentina
+      </h2>
+      <p class="text-gray-500 leading-relaxed mb-4">
+        Química Quattro S.R.L. es una empresa argentina dedicada a la fabricación, fraccionamiento
+        y distribución de desinfectantes y productos de limpieza para uso industrial, gastronómico,
+        hospitalario y doméstico.
+      </p>
+      <p class="text-gray-500 leading-relaxed mb-8">
+        Nos especializamos en ácido peracético, desinfectantes de amplio espectro y líneas de
+        limpieza profesional, trabajando con formulaciones propias que garantizan eficacia y seguridad.
+      </p>
+
+      <!-- Features -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        @for (feature of features; track feature.title) {
+          <div class="bg-white rounded-xl p-5 border-l-4 border-teal">
+            <p class="font-montserrat font-bold text-navy text-sm mb-1">{{ feature.title }}</p>
+            <p class="text-gray-500 text-xs leading-relaxed">{{ feature.text }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

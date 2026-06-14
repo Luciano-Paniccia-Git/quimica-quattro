@@ -1,0 +1,65 @@
+<nav
+  [class]="scrolled() ? 'fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[70px] bg-navy' : 'fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[70px] bg-navy/95'"
+>
+  <button
+    (click)="scrollTo('inicio')"
+    class="flex items-center gap-2.5 cursor-pointer bg-transparent border-none"
+  >
+    <svg viewBox="0 0 44 44" fill="none" class="h-9 w-auto">
+      <circle cx="22" cy="8" r="6" fill="#5BB8C4"/>
+      <circle cx="8" cy="26" r="6" fill="white" fill-opacity="0.9"/>
+      <circle cx="36" cy="26" r="6" fill="white" fill-opacity="0.9"/>
+      <circle cx="22" cy="36" r="6" fill="white" fill-opacity="0.9"/>
+      <line x1="22" y1="14" x2="8" y2="20" stroke="#5BB8C4" stroke-width="3" stroke-linecap="round"/>
+      <line x1="22" y1="14" x2="36" y2="20" stroke="#5BB8C4" stroke-width="3" stroke-linecap="round"/>
+      <line x1="8" y1="32" x2="22" y2="30" stroke="white" stroke-opacity="0.5" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="36" y1="32" x2="22" y2="30" stroke="white" stroke-opacity="0.5" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <div class="text-left">
+      <p class="font-montserrat font-bold text-white text-sm leading-tight tracking-wide">QUÍMICA QUATTRO</p>
+      <p class="font-montserrat font-medium text-teal text-[10px] tracking-widest">S.R.L.</p>
+    </div>
+  </button>
+
+  <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+    <li>
+      <button (click)="scrollTo('nosotros')" class="text-white/80 hover:text-teal text-sm font-medium transition-colors bg-transparent border-none cursor-pointer">
+        Nosotros
+      </button>
+    </li>
+    <li>
+      <button (click)="scrollTo('productos')" class="text-white/80 hover:text-teal text-sm font-medium transition-colors bg-transparent border-none cursor-pointer">
+        Productos
+      </button>
+    </li>
+    <li>
+      <button (click)="scrollTo('ventajas')" class="text-white/80 hover:text-teal text-sm font-medium transition-colors bg-transparent border-none cursor-pointer">
+        Por qué elegirnos
+      </button>
+    </li>
+    <li>
+      <button (click)="scrollTo('contacto')" class="bg-teal hover:bg-teal-400 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors border-none cursor-pointer">
+        Contacto
+      </button>
+    </li>
+  </ul>
+
+  <button
+    class="md:hidden flex flex-col gap-1.5 bg-transparent border-none cursor-pointer p-1"
+    (click)="toggleMenu()"
+    aria-label="Menú"
+  >
+    <span class="block w-6 h-0.5 bg-white rounded"></span>
+    <span class="block w-6 h-0.5 bg-white rounded"></span>
+    <span class="block w-6 h-0.5 bg-white rounded"></span>
+  </button>
+</nav>
+
+@if (menuOpen()) {
+  <div class="fixed top-[70px] left-0 right-0 z-40 bg-navy px-[5%] py-6 flex flex-col gap-5 md:hidden">
+    <button (click)="scrollTo('nosotros')" class="text-white/80 hover:text-teal text-left text-base font-medium bg-transparent border-none cursor-pointer">Nosotros</button>
+    <button (click)="scrollTo('productos')" class="text-white/80 hover:text-teal text-left text-base font-medium bg-transparent border-none cursor-pointer">Productos</button>
+    <button (click)="scrollTo('ventajas')" class="text-white/80 hover:text-teal text-left text-base font-medium bg-transparent border-none cursor-pointer">Por qué elegirnos</button>
+    <button (click)="scrollTo('contacto')" class="bg-teal text-white text-base font-semibold px-5 py-3 rounded-lg w-full border-none cursor-pointer">Contacto</button>
+  </div>
+}

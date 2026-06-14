@@ -1,0 +1,70 @@
+<section id="inicio" class="relative min-h-screen bg-navy flex items-center overflow-hidden px-[5%] pt-[100px] pb-16">
+
+  <svg class="absolute inset-0 w-full h-full pointer-events-none"
+    viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice">
+    <circle cx="900" cy="200" r="22" fill="rgba(91,184,196,0.12)"/>
+    <circle cx="980" cy="320" r="18" fill="rgba(91,184,196,0.10)"/>
+    <circle cx="820" cy="320" r="18" fill="rgba(91,184,196,0.10)"/>
+    <circle cx="900" cy="420" r="22" fill="rgba(91,184,196,0.12)"/>
+    <line x1="900" y1="222" x2="980" y2="302" stroke="rgba(91,184,196,0.10)" stroke-width="1.5"/>
+    <line x1="900" y1="222" x2="820" y2="302" stroke="rgba(91,184,196,0.10)" stroke-width="1.5"/>
+    <line x1="980" y1="338" x2="900" y2="398" stroke="rgba(91,184,196,0.10)" stroke-width="1.5"/>
+    <line x1="820" y1="338" x2="900" y2="398" stroke="rgba(91,184,196,0.10)" stroke-width="1.5"/>
+    <circle cx="1200" cy="120" r="14" fill="rgba(91,184,196,0.07)"/>
+    <circle cx="1260" cy="200" r="12" fill="rgba(91,184,196,0.07)"/>
+    <circle cx="1140" cy="200" r="12" fill="rgba(91,184,196,0.07)"/>
+    <line x1="1200" y1="134" x2="1260" y2="188" stroke="rgba(91,184,196,0.07)" stroke-width="1.5"/>
+    <line x1="1200" y1="134" x2="1140" y2="188" stroke="rgba(91,184,196,0.07)" stroke-width="1.5"/>
+    <circle cx="700" cy="600" r="14" fill="rgba(91,184,196,0.06)"/>
+    <circle cx="760" cy="660" r="11" fill="rgba(91,184,196,0.06)"/>
+    <circle cx="640" cy="660" r="11" fill="rgba(91,184,196,0.06)"/>
+    <line x1="700" y1="614" x2="760" y2="649" stroke="rgba(91,184,196,0.06)" stroke-width="1.5"/>
+    <line x1="700" y1="614" x2="640" y2="649" stroke="rgba(91,184,196,0.06)" stroke-width="1.5"/>
+  </svg>
+
+  <div class="relative z-10 max-w-2xl">
+    <div class="inline-flex items-center gap-2 bg-teal/15 border border-teal/30 text-teal text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+      <span class="w-1.5 h-1.5 rounded-full bg-teal block"></span>
+      Fabricación y Fraccionamiento
+    </div>
+
+    <h1 class="font-montserrat font-extrabold text-white leading-tight mb-6 text-5xl">
+      Soluciones químicas para
+      <em class="not-italic text-teal"> industria y comercio</em>
+    </h1>
+
+    <p class="text-white/70 text-lg leading-relaxed mb-10 max-w-xl">
+      Producimos y distribuimos desinfectantes, productos de limpieza y químicos industriales
+      con los más altos estándares de calidad. Desde Santa Fe para todo el país.
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+      <button
+        (click)="scrollTo('productos')"
+        class="bg-teal hover:bg-teal-400 text-white font-semibold px-7 py-3.5 rounded-lg transition-all hover:-translate-y-0.5 border-none cursor-pointer text-sm">
+        Ver productos
+      </button>
+      <button
+        (click)="scrollTo('contacto')"
+        class="bg-transparent text-white font-semibold px-7 py-3.5 rounded-lg border-2 border-white/30 hover:border-white/60 hover:bg-white/5 transition-all cursor-pointer text-sm">
+        Solicitar cotización
+      </button>
+    </div>
+  </div>
+
+  <div class="absolute bottom-12 right-[5%] hidden lg:flex gap-10 z-10">
+    <div class="text-center">
+      <p class="font-montserrat font-extrabold text-teal text-3xl">+10</p>
+      <p class="text-white/50 text-xs tracking-widest uppercase mt-1">años de trayectoria</p>
+    </div>
+    <div class="text-center">
+      <p class="font-montserrat font-extrabold text-teal text-3xl">ISO</p>
+      <p class="text-white/50 text-xs tracking-widest uppercase mt-1">normas de calidad</p>
+    </div>
+    <div class="text-center">
+      <p class="font-montserrat font-extrabold text-teal text-3xl">100%</p>
+      <p class="text-white/50 text-xs tracking-widest uppercase mt-1">fabricación propia</p>
+    </div>
+  </div>
+
+</section>
